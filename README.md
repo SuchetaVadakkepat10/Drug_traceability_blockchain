@@ -5,6 +5,11 @@ A proof-of-concept blockchain-based drug traceability project using Ethereum sma
 - `backend/` � Hardhat smart contract project with Solidity contracts, tests, artifacts, and deployment scripts.
 - `front-end/` � Static front-end assets for interacting with the smart contracts.
 
+
+## Demo Video 
+Attached is a demo video of the POC 
+
+![demo video]{Drug-traceability-demo.gif}
 ## Backend
 
 The backend is a Hardhat project implementing:
