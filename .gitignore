@@ -1,0 +1,39 @@
+# Node modules
+**/node_modules/
+
+# Hardhat build/artifacts/cache
+backend/artifacts/
+backend/cache/
+backend/typechain-types/
+backend/build-info/
+backend/console-history.txt
+backend/solidity-files-cache.json
+
+# Optional Hardhat output
+backend/.env
+backend/*.local
+backend/*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Front-end build outputs
+front-end/dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+
+# Environment variables
+.env
+*.env

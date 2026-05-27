@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Traceability System</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href ="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Drug Traceability System</h1>
+
+        <div class="card connect-wallet" id="connectSection">
+            <h2>Connect Wallet</h2>
+            <p style="margin-bottom: 20px;">Please connect your MetaMask wallet to continue</p>
+            <button onclick="connectWallet()">Connect MetaMask</button>
+            <div id="walletInfo"></div>
+        </div>
+
+        <div id="mainApp" style="display: none;">
+            <div class="grid">
+                <!-- Mint Batch Section -->
+                <div class="card">
+                    <h2>🏭 Mint Batch (Manufacturer)</h2>
+                    <div class="form-group">
+                        <label>Drug Name</label>
+                        <input type="text" id="drugName" placeholder="e.g., Paracetamol">
+                    </div>
+                    <div class="form-group">
+                        <label>Expiry Date</label>
+                        <input type="date" id="expiryDate">
+                    </div>
+                    <div class="form-group">
+                        <label>Total Units</label>
+                        <input type="number" id="totalUnits" placeholder="e.g., 100" min="1">
+                    </div>
+                    <button onclick="mintBatch()">Mint Batch</button>
+                    <div id="mintStatus"></div>
+                </div>
+
+                <!-- Dispense Unit Section -->
+                <div class="card">
+                    <h2>💊 Dispense Unit (Pharmacy)</h2>
+                    <div class="form-group">
+                        <label>Batch ID</label>
+                        <input type="number" id="dispenseBatchId" placeholder="e.g., 1" min="1">
+                    </div>
+                    <button onclick="dispenseUnit()">Dispense Unit</button>
+                    <div id="dispenseStatus"></div>
+                    <div id="qrcode"></div>
+                </div>
+            </div>
+
+            <!-- View Batch Details -->
+            <div class="card">
+                <h2>🔍 View Batch Details</h2>
+                <div class="form-group">
+                    <label>Batch ID</label>
+                    <input type="number" id="viewBatchId" placeholder="e.g., 1" min="1">
+                </div>
+                <button onclick="viewBatch()">View Details</button>
+                <div id="batchDetails"></div>
+            </div>
+
+            <!-- View Unit Details -->
+            <div class="card">
+                <h2>📋 Verify Unit (Patient/Regulator)</h2>
+                <div class="form-group">
+                    <label>Unit Token ID</label>
+                    <input type="number" id="viewUnitId" placeholder="e.g., 1" min="1">
+                </div>
+                <button onclick="viewUnit()">Verify Unit</button>
+                <div id="unitDetails"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
