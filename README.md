@@ -9,7 +9,10 @@ A proof-of-concept blockchain-based drug traceability project using Ethereum sma
 ## Demo Video 
 Attached is a demo video of the POC 
 
-![demo video](Drug-traceability-demo.gif)
+
+https://github.com/user-attachments/assets/c6228a18-0f8b-43aa-ae4d-991757b4391a
+
+
 ## Backend
 
 The backend is a Hardhat project implementing:
